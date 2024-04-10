@@ -6,6 +6,13 @@ const routes = [
       { path: '', component: () => import('pages/IndexPage.vue') }
     ]
   },
+  {
+    path: '/landing',
+    component: () => import('layouts/LandingLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/MainPage.vue') }
+    ]
+  },
 
   // Always leave this as last one,
   // but you can also remove it
